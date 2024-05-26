@@ -26,6 +26,10 @@ screen.
     setSomeVal(function(oldValue) {
             return oldValue + "2"
         })
+5. Array Spread Operator
+    Ex: setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
 3. Conditional Rendering
 4. Forms
 5. Side Effects
