@@ -1,3 +1,4 @@
+# Draft README
 ### What I have used
 What I have used in this meme project
 1. Event Listeners
@@ -30,6 +31,7 @@ screen.
     Ex: setThingsArray(prevThingsArray => {
             return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
         })
+6. Changing the parent component state from child component        
 3. Conditional Rendering
 4. Forms
 5. Side Effects
