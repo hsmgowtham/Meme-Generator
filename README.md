@@ -1,3 +1,4 @@
+# Draft README
 ### What I have used
 What I have used in this meme project
 1. Event Listeners
@@ -26,6 +27,26 @@ screen.
     setSomeVal(function(oldValue) {
             return oldValue + "2"
         })
+5. Array Spread Operator
+    Ex: setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
+6. Changing the parent component state from child component    
+7. controlled Form Components by setting the value to input tags    
 3. Conditional Rendering
 4. Forms
-5. Side Effects
+5. Managing Side Effects
+    Side Effects: operations that affect something outside the scope of the function being executed.
+    what can't react handle on it's own?
+    - (Out)side effects
+        - Data Fetching: Making API calls to retrieve or submit data.
+        - Subscriptions: Setting up subscriptions to data sources or external services (like WebSockets).
+        - Manual DOM Manipulations: Directly manipulating the DOM outside of the React rendering cycle.
+        - Timers: Setting up and clearing timers using setTimeout or setInterval.
+        - Logging: Sending logs to an external logging service.
+    React provides several tools to manage these side effects efficiently:
+
+    useEffect Hook:
+    The useEffect hook is the primary way to handle side effects in functional components. It runs after the component renders and can be used for various side effects like fetching data, setting up subscriptions, and updating the DOM.
+
+
