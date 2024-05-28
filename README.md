@@ -50,3 +50,4 @@ screen.
     The useEffect hook is the primary way to handle side effects in functional components. It runs after the component renders and can be used for various side effects like fetching data, setting up subscriptions, and updating the DOM.
 
 
+    cleanup functions for useEffect
