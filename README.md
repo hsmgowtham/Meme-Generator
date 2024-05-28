@@ -1,53 +1,167 @@
-# Draft README
-### What I have used
-What I have used in this meme project
-1. Event Listeners
-2. State
-    Props Vs State:
-    **Props**:
-        refers to the properties being passed into a component in order for it to work correctly, similarly to how a function receives a parameters.
-        A Component receving props is not allowed to modify those props(I.e they are immutable)
-    **State**:
-        refers to values that are managed by a component, similar to variables declared inside a function. Any time you have challenging values
-        that should be saved/displayed, you'll likely be using state.
-        Ex: React.useState() returns array [undefined, f()]
+# Meme Generator
 
-    1. When would you want to use props instead of state?
-    Anytime you want to pass data into a component so that component can determine what will get displayed on the
-    2. When would you want to use state instead of props?
-    Anytime you want a component to maintain some values from within the component. (And "remember" those values even when React re-renders the component).
-screen.
-3. useState array destructuring
-    Ex: const [someval, setSomeVal] = React.useState("temp_val")
-    console.log(someval) => temp_val
-5. Updating state
-    Ex: setSomeVal("temp_val_2")
-4. using state with a callback function
-    if we want to use the old value
-    setSomeVal(function(oldValue) {
-            return oldValue + "2"
-        })
-5. Array Spread Operator
-    Ex: setThingsArray(prevThingsArray => {
-            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
-        })
-6. Changing the parent component state from child component    
-7. controlled Form Components by setting the value to input tags    
-3. Conditional Rendering
-4. Forms
-5. Managing Side Effects
-    Side Effects: operations that affect something outside the scope of the function being executed.
-    what can't react handle on it's own?
-    - (Out)side effects
-        - Data Fetching: Making API calls to retrieve or submit data.
-        - Subscriptions: Setting up subscriptions to data sources or external services (like WebSockets).
-        - Manual DOM Manipulations: Directly manipulating the DOM outside of the React rendering cycle.
-        - Timers: Setting up and clearing timers using setTimeout or setInterval.
-        - Logging: Sending logs to an external logging service.
-    React provides several tools to manage these side effects efficiently:
+This project generates random memes and allows you to add top and bottom text to them. It is built using React JS.
 
-    useEffect Hook:
-    The useEffect hook is the primary way to handle side effects in functional components. It runs after the component renders and can be used for various side effects like fetching data, setting up subscriptions, and updating the DOM.
+## Demo
+https://hsmgowtham.github.io/Meme-Generator/
 
+## Features
 
-    cleanup functions for useEffect
+- Generate random memes
+- Add top and bottom text to memes
+- Learnings and implementations:
+  - Event Listeners
+  - State Management
+  - Conditional Rendering
+  - Form Handling
+  - Managing Side Effects
+
+## What I Have Used
+
+### Event Listeners
+
+Used to handle user interactions such as button clicks.
+
+### State
+
+Managed component-specific data using React's `useState` hook.
+
+#### Props vs State
+
+**Props**:
+- Props are properties passed into a component, similar to function parameters.
+- They are immutable and are used to pass data to components to control what is displayed.
+
+**State**:
+- State represents values managed by a component, similar to variables in a function.
+- Used for data that changes over time and needs to be "remembered" by the component.
+
+Examples:
+- `React.useState()` returns an array `[currentState, setStateFunction]`.
+- Using props: Pass data into a component for display.
+- Using state: Maintain values within a component, even when it re-renders.
+
+### State Management Techniques
+
+- **useState Array Destructuring**:
+  ```javascript
+  const [someVal, setSomeVal] = React.useState("temp_val");
+  console.log(someVal); // temp_val
+  ```
+
+- **Updating State**:
+  ```javascript
+  setSomeVal("temp_val_2");
+  ```
+
+- **Using State with a Callback Function**:
+  ```javascript
+  setSomeVal(oldValue => oldValue + "2");
+  ```
+
+- **Array Spread Operator**:
+  ```javascript
+  setThingsArray(prevThingsArray => [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]);
+  ```
+
+- **Changing Parent Component State from Child Component**
+
+- **Controlled Form Components**:
+  Setting the value attribute in input tags to make form components controlled.
+
+### Conditional Rendering
+
+Render components or elements based on certain conditions.
+
+### Forms
+
+Handle user input and form submissions in React.
+
+### Managing Side Effects
+
+Operations that affect things outside the scope of the function being executed.
+
+Examples of side effects:
+- Data fetching
+- Subscriptions
+- Manual DOM manipulations
+- Timers
+- Logging
+
+#### useEffect Hook
+
+The `useEffect` hook handles side effects in functional components. It runs after the component renders and can be used for:
+- Fetching data
+- Setting up subscriptions
+- Updating the DOM
+
+## Installation Guide
+
+Follow these steps to get the project up and running on your local machine.
+
+### 1. Update Your System
+
+Ensure your system is updated:
+
+```sh
+sudo apt update
+sudo apt upgrade
+```
+
+### 2. Install Node.js
+
+Install Node.js, which is required to run React applications:
+
+```sh
+sudo apt install nodejs
+```
+
+Verify the installation:
+
+```sh
+node -v
+```
+
+### 3. Install npm
+
+Install npm, the Node.js package manager:
+
+```sh
+sudo apt install npm
+```
+
+Verify the installation:
+
+```sh
+npm -v
+```
+
+For more detailed instructions, refer to this [DigitalOcean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04).
+
+### 4. Clone the Repository
+
+Clone this repository to your local machine:
+
+```sh
+git clone https://github.com/your-username/meme-generator.git
+```
+
+### 5. Install Dependencies
+
+Navigate into the project directory and install the required dependencies:
+
+```sh
+cd meme-generator
+npm install
+```
+
+### 6. Start the React App
+
+Start the development server:
+
+```sh
+npm start
+```
+
+Your React app should now be running on `http://localhost:3000`.
+
