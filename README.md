@@ -31,7 +31,8 @@ screen.
     Ex: setThingsArray(prevThingsArray => {
             return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
         })
-6. Changing the parent component state from child component        
+6. Changing the parent component state from child component    
+7. controlled Form Components by setting the value to input tags    
 3. Conditional Rendering
 4. Forms
 5. Side Effects

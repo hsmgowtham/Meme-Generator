@@ -35,7 +35,11 @@ export default function Meme() {
 
             </section>
             <section>
-                <img src={meme.randomImage} className='meme--img' alt='meme' />
+                <div className='meme'>
+                    <img src={meme.randomImage} className='meme--img' alt='meme' />
+                    <h2 className="meme--text top">One does not simply</h2>
+                    <h2 className="meme--text bottom">Walk into Mordor</h2>
+                </div>
             </section>
 
         </main>
